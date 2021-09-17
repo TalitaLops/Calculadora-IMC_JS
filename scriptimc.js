@@ -8,20 +8,20 @@ function calculate() {
     document.getElementById("height-val").textContent = height + " cm"
 
     imc = (weight / Math.pow((height / 100), 2)).toFixed(1);
-    result.textContent = imc;
+    resultado.textContent = imc;
 
     if (imc < 18.5) {
-        category = "Abaixo do peso";
-        result.style.color = "#ffc44d";
+        categoria = "Abaixo do peso";
+        resultado.style.color = "#ffc44d";
     } else if (imc >= 18.5 && imc < 24.9) {
-        category = "Peso adequado";
-        result.style.color = "#0be881";
+        categoria = "Peso adequado";
+        resultado.style.color = "#0be881";
     } else if (imc >= 25 && imc <= 29) {
-        category = "Sobrepeso";
-        result.style.color = "#ff884d";
+        categoria = "Sobrepeso";
+        resultado.style.color = "#ff884d";
     } else {
-        category = "Obesidade";
-        result.style.color = "#ff1e10";
+        categoria = "Obesidade";
+        resultado.style.color = "#ff1e10";
     }
-    document.getElementById("category").textContent = category;
+    document.getElementById("categoria").textContent = categoria;
 }
